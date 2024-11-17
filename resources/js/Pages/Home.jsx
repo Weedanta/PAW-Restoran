@@ -1,5 +1,12 @@
-export default function Home() {
+import { Component } from "react";
+import Header from "../Components/Header";
+
+function Home({name}) {
     return(
-        <div className="">Halooo</div>
+        <div className="title">
+            {/* <Header/> */}
+            Halooo</div>
     );
 }
+
+export default Home
