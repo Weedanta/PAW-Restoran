@@ -20,7 +20,7 @@ export default {
                     4: '#00AED6',
                     5: '#003644',
                     6: '#78A083',
-                    7: '#EADB81',
+                    7: '#EAD8B1',
                 },
                 black: '#000000',
                 white: '#FFFFFF',
