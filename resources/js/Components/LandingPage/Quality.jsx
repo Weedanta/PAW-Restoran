@@ -5,8 +5,8 @@ const Quality = ({ title, desc }) => {
         <div className="flex flex-row justify-center items-center">
             <img src="/images/Centang.svg" alt="" draggable="false"/>
             <div className="flex flex-col gap-1">
-                <h1 className="text-3xl font-semibold">{title}</h1>
-                <p className="text-lg font-semibold">{desc}</p>
+                <h1 className="text-xl font-semibold">{title}</h1>
+                <p className="text-md font-semibold">{desc}</p>
             </div>
         </div>
     );
