@@ -4,7 +4,7 @@ const Footer = () => {
             <article className="flex flex-col md:flex-row gap-10 text-white">
                 {/* Logo and Description */}
                 <div className="flex flex-col md:items-start gap-4 w-full md:w-[40%]">
-                    <img src="/images/Logo.png" alt="Logo" className="h-20 w-20 md:h-28 md:w-28" />
+                    <img src="/images/Logo.png" alt="Logo" className="h-20 w-20 md:h-28 md:w-28" draggable='false'/>
                     <h3 className="font-normal text-justify text-lg md:text-xl">
                         Urban Feast is a place where bold flavors, fresh ingredients, and creative dishes come together. Join us for a dining experience that celebrates the art of food in a welcoming atmosphere.
                     </h3>

@@ -12,6 +12,7 @@ const Header = () => {
             src="/images/Logo.png"
             alt="Logo"
             className="h-14 w-14 -my-2"
+            draggable='false'
           />
         </div>
 
@@ -98,7 +99,8 @@ const Header = () => {
               <img
                 src="/images/Logo.png"
                 alt="Urban Feast Logo"
-                className="h-24 w-24 -my-2 "
+                className="h-24 w-24 -my-2"
+                draggable='false'
               />
             </a>
           </li>
