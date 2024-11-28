@@ -3,9 +3,9 @@ import Quality from "./Quality";
 
 const Profile = () => {
     return (
-        <section className="h-screen bg-primary-2 p-10 flex flex-row justify-between">
-            <article className="h-full w-[42%] bg-primary-3 flex justify-center items-center px-28">
-                <div className="flex flex-col text-primary-7 gap-12">
+        <section className="h-full md:h-screen bg-primary-2 p-4 md:p-10 flex flex-col-reverse md:flex-row justify-between gap-4 md:gap-0">
+            <article className="h-full w-full md:w-[42%] bg-primary-3 flex justify-center items-center px-8 md:px-12 lg:px-16">
+                <div className="flex flex-col text-primary-7 gap-4 py-8 md:py-0">
                     <Quality
                         title="Fresh Ingredient"
                         desc="Our dishes are made with locally sourced, premium ingredients, ensuring every bite is fresh and full of flavor."
@@ -25,7 +25,7 @@ const Profile = () => {
                     
                 </div>
             </article>
-            <figure className="h-full w-[56%] overflow-hidden">
+            <figure className="h-full w-full md:w-[56%] overflow-hidden">
                 <img src="/images/Menu1.png" alt="" className="w-full object-cover" draggable="false"/>
             </figure>
         </section>
