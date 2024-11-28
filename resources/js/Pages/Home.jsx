@@ -10,14 +10,14 @@ function Home({ name }) {
     return (
         <main className="flex flex-col">
             <Hero image={"/images/Hero.png"}>
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold mb-2 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-semibold mb-8 md:mb-2 leading-tight">
                     Flavors That Speak <br /> for Themselves
                 </h1>
-                <p className="sm:text-base md:text-lg lg:text-xl mb-6 font-medium md:tracking-widest">
+                <p className="text-lg lg:text-xl mb-6 font-medium md:tracking-widest">
                     Experience bold, creative dishes made with fresh, quality<br className="hidden md:block"></br>ingredients. A feast for your senses.
                 </p>
 
-                <button className="hover:bg-primary-4 bg-primary-5 text-white text-2xl px-8 py-4 md:px-20 md:py-8 rounded-full shadow-md font-semibold">
+                <button className="hover:bg-primary-4 bg-primary-5 text-white text-lg md:text-2xl px-8 py-4 md:px-20 md:py-8 rounded-full shadow-md font-semibold">
                     <p className="tracking-wider">Reserve now!</p>
                 </button>
 
