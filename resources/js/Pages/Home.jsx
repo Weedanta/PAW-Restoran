@@ -6,7 +6,7 @@ import Profile from "../Components/LandingPage/Profile";
 import MenuLandingPage from "../Components/LandingPage/MenuLandingPage";
 
 
-function Home({ name }) {
+function Home() {
     return (
         <main className="flex flex-col">
             <Hero image={"/images/Hero.png"}>

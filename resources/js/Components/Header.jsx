@@ -56,7 +56,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#about"
+                href="/reservation"
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
@@ -92,7 +92,7 @@ const Header = () => {
             <a href="#menu">Our Menu</a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
-            <a href="#reservation">Reservation</a>
+            <a href="/reservation">Reservation</a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
             <a href="/" className="text-2xl font-bold">
