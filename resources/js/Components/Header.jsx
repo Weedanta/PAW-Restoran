@@ -65,7 +65,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#article"
+                href="/aboutUs"
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
@@ -105,7 +105,7 @@ const Header = () => {
             </a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
-            <a href="#about">About Us</a>
+            <a href="/aboutUs">About Us</a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
             <a href="#contact">Contact Us</a>
