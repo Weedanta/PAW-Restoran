@@ -15,8 +15,8 @@ Route::get('/reservation', function () {
     return Inertia('Reservation');
 });
 
-Route::get('/ourmenu', function () {
-    return Inertia('OurMenu');
+Route::get('/menu', function () {
+    return Inertia('Menu');
 });
 
 // Routes untuk Autentikasi
