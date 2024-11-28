@@ -1,11 +1,9 @@
 import React from 'react'
-import Hero from '../Components/LandingPage/Hero'
-import Option from '../Components/Reservation/OptionReservation'
 
-const Reservation = () => {
+const OurMenu = () => {
   return (
-    <main className='bg-primary-3'>
-      <Hero image={"/images/reservation/background.png"}>
+    <main>
+        <Hero image={"/images/reservation/background.png"}>
         <h1 className="text-3xl md:text-5xl font-semibold mb-8 md:mb-2 leading-tight">
           Make a Reservation
         </h1>
@@ -17,9 +15,8 @@ const Reservation = () => {
           <p className="tracking-wider">Reserve now!</p>
         </button>
       </Hero>
-      <Option/>
     </main>
   )
 }
 
-export default Reservation
+export default OurMenu
