@@ -19,6 +19,10 @@ Route::get('/menu', function () {
     return Inertia('Menu');
 });
 
+Route::get('/aboutUs', function () {
+    return Inertia('AboutUs');
+});
+
 // Routes untuk Autentikasi
 Route::get('/login', function () {
     return Inertia::render('Auth/Login');
