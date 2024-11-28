@@ -47,7 +47,7 @@ const Header = () => {
           <ul className="flex flex-col items-start p-8 space-y-6 text-xl">
             <li>
               <a
-                href="#Menu"
+                href="/menu"
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
@@ -89,7 +89,7 @@ const Header = () => {
           className={`hidden md:flex justify-around w-full items-center text-2xl font-semibold px-24`}
         >
           <li className="hover:text-orange-500 cursor-pointer">
-            <a href="#menu">Our Menu</a>
+            <a href="/menu">Our Menu</a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
             <a href="/reservation">Reservation</a>
