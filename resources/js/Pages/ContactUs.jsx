@@ -2,9 +2,9 @@ import React from 'react'
 
 const ContactUs = () => {
     return (
-        <section className=' bg-primary-3 px-24 py-8 text-white'>
-            <div className="h-full w-full flex md:flex-row justify-between">
-                <div className="w-[45%] grid grid-cols-2 items-center justify-center gap-4">
+        <section className=' bg-primary-3 px-8 md:px-16 lg:px-24 py-16 md:py-8 text-white'>
+            <div className="h-full w-full flex flex-col-reverse md:flex-row justify-between gap-12 md:gap-0">
+                <div className="w-full md:w-[45%] grid grid-cols-2 items-center justify-center gap-4">
                     <div className="flex flex-col gap-4">
                         <a href="https://www.youtube.com/">
                             <img src="/images/ContactUs/Youtube.png" alt="" className="object-cover w-full h-full" draggable="false" />
@@ -22,8 +22,8 @@ const ContactUs = () => {
                         </a>
                     </div>
                 </div>
-                <div className="w-[50%] flex flex-col justify-center">
-                    <div className="pb-4">
+                <div className="w-full md:w-[50%] flex flex-col justify-center">
+                    <div className="flex flex-col md:text-justify text-center pb-12 md:pb-4">
                         <h1 className='text-4xl font-semibold pb-4'>Get In Touch</h1>
                         <p className='text-base font-semibold'>We’d love to hear from you! Whether you have a question, need assistance, or want to share feedback, feel free to reach out. Fill out the form below, and we’ll get back to you as soon as possible.</p>
                     </div>
@@ -81,7 +81,7 @@ const ContactUs = () => {
 
                         <button
                             type="submit"
-                            class="w-full bg-primary-4 text-white font-medium py-2 rounded-3xl hover:bg-teal-500 transition duration-300"
+                            class="w-full bg-primary-4 text-white font-medium py-2 rounded-3xl hover:bg-primary-1 transition duration-300"
                         >
                             Send Now!
                         </button>
