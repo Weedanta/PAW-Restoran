@@ -23,6 +23,10 @@ Route::get('/aboutUs', function () {
     return Inertia('AboutUs');
 });
 
+Route::get('/contactus', function () {
+    return Inertia('ContactUs');
+});
+
 // Routes untuk Autentikasi
 Route::get('/login', function () {
     return Inertia::render('Auth/Login');
