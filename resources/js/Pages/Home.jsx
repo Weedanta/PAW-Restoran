@@ -1,6 +1,4 @@
 import { Component } from "react";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
 import Hero from "../Components/LandingPage/Hero";
 import Profile from "../Components/LandingPage/Profile";
 import MenuLandingPage from "../Components/LandingPage/MenuLandingPage";
