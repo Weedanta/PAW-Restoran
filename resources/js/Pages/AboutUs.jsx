@@ -1,6 +1,8 @@
 import React from 'react'
 import Hero from '../Components/LandingPage/Hero'
 import Description from '../Components/AbousUs/Description'
+import Description2 from '../Components/AbousUs/Description2'
+
 
 
 const AboutUs = () => {
@@ -15,7 +17,8 @@ const AboutUs = () => {
         </h1>
       </Hero>
       <Description/>
-      
+      <Description2/>
+
 
     </main>
   )

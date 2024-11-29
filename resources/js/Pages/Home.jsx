@@ -2,6 +2,7 @@ import { Component } from "react";
 import Hero from "../Components/LandingPage/Hero";
 import Profile from "../Components/LandingPage/Profile";
 import MenuLandingPage from "../Components/LandingPage/MenuLandingPage";
+import Button from "../Components/LandingPage/Button";
 
 
 function Home() {
@@ -14,14 +15,14 @@ function Home() {
                 <p className="text-lg lg:text-xl mb-6 font-medium md:tracking-widest">
                     Experience bold, creative dishes made with fresh, quality<br className="hidden md:block"></br>ingredients. A feast for your senses.
                 </p>
-
-                <button className="hover:bg-primary-4 bg-primary-5 text-white text-lg md:text-2xl px-8 py-4 md:px-20 md:py-8 rounded-full shadow-md font-semibold">
-                    <p className="tracking-wider">Reserve now!</p>
-                </button>
+                <Button
+                link={"/reservation"}
+                title={"Reserve Now!"}
+                />
 
             </Hero>
-            <Profile/>
-            <MenuLandingPage/>
+            <Profile />
+            <MenuLandingPage />
         </main>
     );
 }
