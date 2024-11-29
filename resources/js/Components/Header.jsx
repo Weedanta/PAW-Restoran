@@ -74,7 +74,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="#outlet"
+                href="/contactus"
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
@@ -108,7 +108,7 @@ const Header = () => {
             <a href="/aboutUs">About Us</a>
           </li>
           <li className="hover:text-orange-500 cursor-pointer">
-            <a href="#contact">Contact Us</a>
+            <a href="/contactus">Contact Us</a>
           </li>
         </ul>
       </nav>
