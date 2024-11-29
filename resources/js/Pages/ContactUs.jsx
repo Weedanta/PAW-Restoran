@@ -30,11 +30,6 @@ const ContactUs = () => {
                     <form
                         action="https://formspree.io/f/mdkopakl" method="POST"
                         class="w-full text-black ">
-                        <input
-                            type="hidden"
-                            name="access_key"
-                            value="53e9333c-266c-4f4c-8613-93a45f63a91e"
-                        />
                         <div class="mb-4">
                             <label for="name" class="block text-white text-sm font-medium mb-1">Name</label>
                             <input
@@ -42,6 +37,7 @@ const ContactUs = () => {
                                 id="name"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-4"
                                 placeholder="Your Name"
+                                name="name"
                                 required
                             />
                         </div>
@@ -53,6 +49,7 @@ const ContactUs = () => {
                                 id="email"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-4"
                                 placeholder="Your Email"
+                                name="email"
                                 required
                             />
                         </div>
@@ -64,6 +61,7 @@ const ContactUs = () => {
                                 id="subject"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-4"
                                 placeholder="Subject"
+                                name="subject"
                                 required
                             />
                         </div>
@@ -75,6 +73,7 @@ const ContactUs = () => {
                                 rows="4"
                                 class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-4"
                                 placeholder="Your Message"
+                                name="massage"
                                 required
                             ></textarea>
                         </div>
