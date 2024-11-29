@@ -47,7 +47,7 @@ const Header = () => {
           <ul className="flex flex-col items-start p-8 space-y-6 text-xl">
             <li>
               <a
-                href="/menu"
+                href="/"
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
