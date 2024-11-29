@@ -51,6 +51,15 @@ const Header = () => {
                 className="hover:text-orange-500"
                 onClick={() => setIsOpen(false)}
               >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/menu"
+                className="hover:text-orange-500"
+                onClick={() => setIsOpen(false)}
+              >
                 Our Menu
               </a>
             </li>
