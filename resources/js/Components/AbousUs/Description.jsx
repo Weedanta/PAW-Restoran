@@ -10,7 +10,6 @@ const Description = () => {
                     </article>
                     <img src="/images/aboutUs/description.png" alt="" className="object-cover h-full md:h-[120%]" draggable="false" />
                 </div>
-                .
             </section>
         </>
     )
