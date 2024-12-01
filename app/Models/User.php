@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;  // Import untuk HasApiTokens
+use Illuminate\Database\Eloquent\Factories\HasFactory; // Import untuk HasFactory
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable; // Gunakan trait yang benar
 
     protected $fillable = [
         'nama', 'jenis_kelamin', 'alamat', 'deskripsi',
