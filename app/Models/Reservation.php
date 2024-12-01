@@ -6,16 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reservation extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
-        'user_id',
-        'name',
-        'email',
-        'phone',
-        'reservation_datetime',
-        'people',
-        'room_type',
-        'payment_method',
-        'additional_request',
+        'user_id', 'name', 'email', 'phone', 
+        'reservation_datetime', 'people', 'room_type',
+        'payment_method', 'payment_proof', 'additional_request'
+    ];
+
+    protected $casts = [
+        'reservation_datetime' => 'datetime',
     ];
 
     public function user()
