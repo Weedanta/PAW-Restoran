@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\Admin\MenuController as AdminMenuController;
+use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
+
 
 // Route untuk halaman utama (Home)
 Route::get('/', function () {
@@ -39,26 +43,26 @@ Route::get('/login-admin', function () {
     return Inertia::render('LoginAdmin');
 });
 
-// Middleware untuk membatasi akses hanya untuk pengguna yang sudah login
-// Route::middleware(['auth'])->group(function () {
 
-//     // Dashboard
-//     Route::get('/dashboard', function () {
-//         return Inertia::render('Dashboard', [
-//             'user' => Auth::user(), // Menggunakan Auth::user() untuk data pengguna
-//         ]);
-//     })->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
 
-//     // Routes untuk Reservasi
-//     Route::get('/reservations', [ReservationController::class, 'index'])->name('reservations.index');
-//     Route::get('/reservations/create', [ReservationController::class, 'create'])->name('reservations.create');
-//     Route::post('/reservations', [ReservationController::class, 'store'])->name('reservations.store');
-//     Route::get('/reservations/{reservation}', [ReservationController::class, 'show'])->name('reservations.show');
-//     Route::get('/reservations/{reservation}/edit', [ReservationController::class, 'edit'])->name('reservations.edit');
-//     Route::put('/reservations/{reservation}', [ReservationController::class, 'update'])->name('reservations.update');
-//     Route::delete('/reservations/{reservation}', [ReservationController::class, 'destroy'])->name('reservations.destroy');
-// });
-
+    // User routes
+    Route::resource('reservations', ReservationController::class);
+    Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
+    
+    // Admin routes
+    Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+        Route::resource('menu', AdminMenuController);
+        Route::resource('reservations', AdminReservationController::class);
+        Route::post('reservations/{reservation}/approve', [AdminReservationController::class, 'approve'])
+            ->name('reservations.approve');
+        Route::post('reservations/{reservation}/reject', [AdminReservationController::class, 'reject'])
+            ->name('reservations.reject');
+    });
+});
   
 
 Route::get('/', function () {
