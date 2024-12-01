@@ -27,18 +27,17 @@ Route::get('/contactus', function () {
     return Inertia('ContactUs');
 });
 
-// Routes untuk Autentikasi
 Route::get('/login', function () {
-    return Inertia::render('Auth/Login');
-})->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+    return Inertia::render('Login');
+});
 
 Route::get('/register', function () {
-    return Inertia::render('Auth/Register');
-})->name('register');
-Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+    return Inertia::render('Register');
+});
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/login-admin', function () {
+    return Inertia::render('LoginAdmin');
+});
 
 // Middleware untuk membatasi akses hanya untuk pengguna yang sudah login
 // Route::middleware(['auth'])->group(function () {
