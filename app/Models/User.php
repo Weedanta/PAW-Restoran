@@ -7,17 +7,19 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'nama', 'jenis_kelamin', 'alamat', 'deskripsi',
+        'email', 'nomor_telepon', 'password'
     ];
 
     protected $hidden = [
         'password',
-        'remember_token',
     ];
-}
 
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+}
