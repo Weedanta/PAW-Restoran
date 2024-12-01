@@ -8,7 +8,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\Admin\MenuController as AdminMenuController;
 use App\Http\Controllers\Admin\ReservationController as AdminReservationController;
-
+use App\Models\Menu;
 
 // Route untuk halaman utama (Home)
 Route::get('/', function () {
@@ -54,8 +54,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
     
     // Admin routes
-    Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
-        Route::resource('menu', AdminMenuController);
+    Route::middleware(['admin'])->prefix(prefix: 'admin')->name('admin.')->group(function () {
+        Route::resource("Menu", AdminMenuController::class);
         Route::resource('reservations', AdminReservationController::class);
         Route::post('reservations/{reservation}/approve', [AdminReservationController::class, 'approve'])
             ->name('reservations.approve');
