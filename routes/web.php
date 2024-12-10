@@ -21,21 +21,24 @@ Route::get('/menu', function () {
 
 Route::get('/aboutUs', function () {
     return Inertia('AboutUs');
-});
+})->name('aboutUs');
 
 Route::get('/contactus', function () {
     return Inertia('ContactUs');
-});
+})->name('contactUs');;
+
+
 
 // Routes untuk Autentikasi
 Route::get('/login', function () {
-    return Inertia::render('Auth/Login');
+    return inertia('Login/Login');
 })->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/loginAdmin', [AuthController::class, 'loginAdmin'])->name('login.post');
+Route::post('/login', [AuthController::class, 'loginUser'])->name('login.post2');
 
 Route::get('/register', function () {
-    return Inertia::render('Auth/Register');
+    return Inertia::render('Login/Register');
 })->name('register');
-Route::post('/register', [AuthController::class, 'register'])->name('register.post');
+Route::post('/register', [AuthController::class, 'registerUser'])->name('register.post');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
