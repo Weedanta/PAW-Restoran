@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->id('admin_id');  // Kolom admin_id sebagai primary key
+            $table->id();  // Kolom admin_id sebagai primary key
             $table->string('admin_email', 255)->unique();  // Kolom email dengan constraint UNIQUE
             $table->string('admin_password');  // Kolom password
             $table->timestamps();  // Kolom created_at dan updated_at
