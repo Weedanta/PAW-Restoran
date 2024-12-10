@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menu;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class MenuController
 {
@@ -12,7 +13,9 @@ class MenuController
      */
     public function index()
     {
-        //
+        return Inertia::render('Menu', [
+            'menus' => Menu::get()
+        ]);
     }
 
     /**
@@ -69,14 +72,34 @@ class MenuController
      */
     public function update(Request $request, Menu $menu)
     {
+        $validated = request()->validate([
+            'id' => ['int'],
+            'kategori' => ['nullable', 'string', 'max:20'],  // Kategori bersifat opsional, maksimal 20 karakter
+            'nama_menu' => [ 'string', 'max:50'],  // Nama menu wajib diisi dan maksimal 50 karakter
+            'harga' => [ 'integer', 'min:0'],  // Harga wajib diisi dan harus angka positif
+            'deskripsi' => ['nullable', 'string'],  // Deskripsi opsional, dan harus berupa string jika ada
+        ]);
+
+        $admin_id = session('admin_id');
+
+        $new_menu = [
+            // 'id' => $validated['id'],
+            'kategori' => $validated['kategori'],
+            'nama_menu' => $validated['nama_menu'],
+            'harga' => $validated['harga'],
+            'deskripsi' => $validated['deskripsi'],
+            'admin_id' => $admin_id
+        ];
+
+        Menu::where('id', $validated['id'])->update($new_menu);
         
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Menu $menu)
+    public function destroy(Menu $menu, string $id)
     {
-        //
+        Menu::where('id', $id)->delete();
     }
 }

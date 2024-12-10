@@ -33,7 +33,7 @@ class AuthController
             ]);
         }
 
-        session(['admin_id' => $admin->admin_id]);
+        session(['admin_id' => $admin->id]);
 
         return to_route('contactUs');
     }
