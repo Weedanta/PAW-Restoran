@@ -1,6 +1,6 @@
 import React from 'react'
 import Hero from '../Components/LandingPage/Hero'
-import Option from '../Components/Reservation/OptionReservation'
+// import Option from '../Components/Reservation/OptionReservation'
 
 const Reservation = () => {
   return (

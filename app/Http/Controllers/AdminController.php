@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Menu;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
-class MenuController
+class AdminController
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class MenuController
     /**
      * Display the specified resource.
      */
-    public function show(Menu $menu)
+    public function show(Admin $admin)
     {
         //
     }
@@ -42,7 +42,7 @@ class MenuController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Menu $menu)
+    public function edit(Admin $admin)
     {
         //
     }
@@ -50,7 +50,7 @@ class MenuController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Menu $menu)
+    public function update(Request $request, Admin $admin)
     {
         //
     }
@@ -58,7 +58,7 @@ class MenuController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Menu $menu)
+    public function destroy(Admin $admin)
     {
         //
     }
