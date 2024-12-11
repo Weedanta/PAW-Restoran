@@ -28,7 +28,29 @@ class ReservationController
      */
     public function store(Request $request)
     {
-        //
+        // Validasi data reservasi
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:100'],
+            'status' => ['required', 'in:Pending,Rejected,Approved'],
+            'reservation_datetime' => ['required', 'date', 'after_or_equal:today'],
+            'people' => ['required', 'integer', 'min:1'],
+            'room_type' => ['required', 'in:Indoor,Outdoor,VIP'],
+            'payment_method' => ['required', 'in:BRI,BNI,Mandiri,BCA,OVO/Gopay/ShopeePay'],
+            'additional_request' => ['nullable', 'string'],
+        ]);
+
+        $user_id = session('user_id');
+
+        $reservation = Reservation::create([
+            'name' => $validated['name'],
+            'status' => $validated['status'],
+            'reservation_datetime' => $validated['reservation_datetime'],
+            'people' => $validated['people'],
+            'room_type' => $validated['room_type'],
+            'payment_method' => $validated['payment_method'],
+            'additional_request' => $validated['additional_request'],
+            'user_id' => $user_id
+        ]);
     }
 
     /**
@@ -52,14 +74,38 @@ class ReservationController
      */
     public function update(Request $request, Reservation $reservation)
     {
-        //
+        // Validasi data reservasi
+        $validated = $request->validate([
+            'name' => ['required', 'string', 'max:100'],
+            'status' => ['required', 'in:Pending,Rejected,Approved'],
+            'reservation_datetime' => ['required', 'date', 'after_or_equal:today'],
+            'people' => ['required', 'integer', 'min:1'],
+            'room_type' => ['required', 'in:Indoor,Outdoor,VIP'],
+            'payment_method' => ['required', 'in:BRI,BNI,Mandiri,BCA,OVO/Gopay/ShopeePay'],
+            'additional_request' => ['nullable', 'string'],
+        ]);
+
+        $user_id = session('user_id');
+
+        $new_reservation = [
+            'name' => $validated['name'],
+            'status' => $validated['status'],
+            'reservation_datetime' => $validated['reservation_datetime'],
+            'people' => $validated['people'],
+            'room_type' => $validated['room_type'],
+            'payment_method' => $validated['payment_method'],
+            'additional_request' => $validated['additional_request'],
+            'user_id' => $user_id
+        ];
+
+        Reservation::where('id', $validated['id'])->update($new_reservation);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Reservation $reservation)
+    public function destroy(Reservation $reservation, string $id)
     {
-        //
+        Reservation::where('id', $id)->delete();
     }
 }

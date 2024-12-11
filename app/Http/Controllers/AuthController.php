@@ -62,7 +62,7 @@ class AuthController
             ]);
         }
 
-        session(['user_email' => $user->email]);
+        session(['user_id' => $user->id]);
 
         return to_route('contactUs');
     }

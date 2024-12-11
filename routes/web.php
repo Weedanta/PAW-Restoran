@@ -25,8 +25,14 @@ Route::get('/aboutUs', function () {
 
 Route::get('/contactus', function () {
     return Inertia('ContactUs');
-})->name('contactUs');;
+})->name('contactUs');
 
+Route::get('/admin', function () {
+    return Inertia('Admin');
+})->name('admin');
+
+
+// Menu
 Route::get('/editmenu', function () {
     return Inertia::render('Admin/EditMenu', [
         'menus' => Menu::get()
@@ -50,3 +56,4 @@ Route::get('/register', function () {
 Route::post('/register', [AuthController::class, 'registerUser'])->name('register.post');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+

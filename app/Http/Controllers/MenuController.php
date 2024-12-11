@@ -46,7 +46,7 @@ class MenuController
             'kategori' => $validated['kategori'],
             'nama_menu' => $validated['nama_menu'],
             'harga' => $validated['harga'],
-            'deskripsi' => $validated['deskripsi'],
+            'deskripsi' => $validated['deskripsi'],         
             'admin_id' => $admin_id
         ]);
     }
