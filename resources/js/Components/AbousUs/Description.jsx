@@ -8,7 +8,7 @@ const Description = () => {
                     <article className=''>
                         <p className='font-medium md:text-lg lg:text-3xl text-justify'>Founded in 2015, Urban Feast was born out of a passion for bringing together bold flavors and fresh ingredients in a modern, welcoming atmosphere. Our mission is simple: to offer a dining experience that celebrates creativity, quality, and the joy of great food. From our carefully crafted dishes to the vibrant ambiance, every meal is an invitation to savor something truly special.</p>
                     </article>
-                    <img src="/images/aboutUs/description.png" alt="" className="object-cover h-full md:h-[120%]" draggable="false" />
+                    <img src="/images/aboutUs/description.png" alt="" className="object-cover h-full md:h-[120%] hover:scale-105 duration-300" draggable="false" />
                 </div>
             </section>
         </>

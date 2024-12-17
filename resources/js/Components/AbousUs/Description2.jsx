@@ -13,7 +13,7 @@ const Description2 = () => {
                     title={"See Our Menu!"}
                     />
                 </article>
-                <img src="/images/aboutUs/menu.png" alt="" className="object-cover h-full" draggable="false" />
+                <img src="/images/aboutUs/menu.png" alt="" className="object-cover h-full hover:scale-105 duration-300 shadow-black" draggable="false" />
             </div>
         </section>
     )
