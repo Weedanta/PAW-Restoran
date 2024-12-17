@@ -25,7 +25,7 @@ const Profile = () => {
                     
                 </div>
             </article>
-            <figure className="h-full w-full md:w-[56%] overflow-hidden">
+            <figure className="h-full w-full md:w-[56%] overflow-hidden hover:brightness-75 duration-300 hover:scale-105">
                 <img src="/images/Menu1.png" alt="" className="w-full object-cover" draggable="false"/>
             </figure>
         </section>

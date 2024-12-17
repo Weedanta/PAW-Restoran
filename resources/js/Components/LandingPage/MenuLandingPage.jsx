@@ -50,19 +50,19 @@ const MenuLandingPage = () => {
 
             {/* dekstop */}
             <div className="hidden md:flex bg-primary-3 w-full h-screen">
-                <div className="w-[40%] h-full relative overflow-hidden">
+                <div className="w-[40%] h-full relative overflow-hidden hover:scale-105 duration-300">
                     <img src="/images/MenuLandingPage/sec1-img1.png" alt="" className="object-cover w-full" draggable="false"/>
                 </div>
                 <div className="h-screen w-[60%]">
                     <div className="h-[50%] grid grid-cols-3">
-                        <div className="h-full w-full overflow-hidden bg-black">
+                        <div className="h-full w-full overflow-hidden bg-black hover:scale-105 duration-300">
                             <img src="/images/MenuLandingPage/menu1.png" alt="" className="object-cover w-full" draggable="false"/>
                         </div>
                         <CardMenu
                             title={"Savory Lasagna"}
                             desc={"Layers of rich, creamy sauce, tender pasta, and seasoned meats. A comforting dish that’s both hearty and satisfying."}
                         />
-                        <div className="h-full  w-full overflow-hidden bg-black">
+                        <div className="h-full  w-full overflow-hidden bg-black hover:scale-105 duration-300">
                             <img src="/images/MenuLandingPage/menu2.png" alt="" className="object-cover w-full" draggable="false"/>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ const MenuLandingPage = () => {
                             title={"Pizza Perfection"}
                             desc={"A thin, crispy crust topped with fresh ingredients, baked to golden perfection. Every bite is a celebration of flavor."}
                         />
-                        <div className="h-full  w-full overflow-hidden bg-black">
+                        <div className="h-full  w-full overflow-hidden bg-black hover:scale-105 duration-300">
                             <img src="/images/MenuLandingPage/menu3.png" alt="" className="object-cover w-full" draggable="false"/>
                         </div>
                         <CardMenu

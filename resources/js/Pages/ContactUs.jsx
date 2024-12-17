@@ -7,18 +7,18 @@ const ContactUs = () => {
                 <div className="w-full md:w-[45%] grid grid-cols-2 items-center justify-center gap-4">
                     <div className="flex flex-col gap-4">
                         <a href="https://www.youtube.com/">
-                            <img src="/images/ContactUs/Youtube.png" alt="" className="object-cover w-full h-full" draggable="false" />
+                            <img src="/images/ContactUs/Youtube.png" alt="" className="object-cover w-full h-full hover:scale-105 duration-300" draggable="false" />
                         </a>
                         <a href="https://www.instagram.com/">
-                            <img src="/images/ContactUs/Instagram.png" alt="" className="object-cover w-full h-full" draggable="false" />
+                            <img src="/images/ContactUs/Instagram.png" alt="" className="object-cover w-full h-full hover:scale-105 duration-300" draggable="false" />
                         </a>
                     </div>
                     <div className="flex flex-col gap-4">
                         <a href="https://www.gmail.com/">
-                            <img src="/images/ContactUs/Gmail.png" alt="" className="object-cover w-full h-full" draggable="false" />
+                            <img src="/images/ContactUs/Gmail.png" alt="" className="object-cover w-full h-full hover:scale-105 duration-300" draggable="false" />
                         </a>
                         <a href="https://www.x.com/">
-                            <img src="/images/ContactUs/Twitter.png" alt="" className="object-cover w-full h-full" draggable="false" />
+                            <img src="/images/ContactUs/Twitter.png" alt="" className="object-cover w-full h-full hover:scale-105 duration-300" draggable="false" />
                         </a>
                     </div>
                 </div>
