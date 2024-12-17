@@ -108,7 +108,7 @@ const Header = () => {
               <img
                 src="/images/Logo.png"
                 alt="Urban Feast Logo"
-                className="h-24 w-24 -my-2"
+                className="h-20 w-20 -my-2"
                 draggable='false'
               />
             </a>

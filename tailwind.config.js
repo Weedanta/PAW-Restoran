@@ -26,8 +26,8 @@ export default {
                 white: '#FFFFFF',
             },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+                roboto: ['Roboto', 'sans-serif'],
+              },
         },
     },
     plugins: [],

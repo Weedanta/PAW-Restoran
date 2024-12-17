@@ -1,6 +1,5 @@
 import React from 'react'
 import Hero from '../Components/LandingPage/Hero'
-// import Option from '../Components/Reservation/OptionReservation'
 
 const Reservation = () => {
   return (
@@ -17,7 +16,7 @@ const Reservation = () => {
           <p className="tracking-wider">Reserve now!</p>
         </button>
       </Hero>
-      <Option/>
+     
     </main>
   )
 }

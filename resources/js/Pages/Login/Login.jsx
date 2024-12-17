@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, usePage } from '@inertiajs/react';
+import Hero from '../../Components/LandingPage/Hero';
 
 const Login = () => {
     const { message } = usePage().props
@@ -19,8 +20,9 @@ const Login = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
+        <Hero image={"/images/Hero.png"}>
+        <div className="flex justify-center items-center">
+            <div className="bg-white brightness-50 p-8 rounded-lg shadow-lg w-full sm:w-96">
                 <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
                 {message && (
                     <div className='text-xl text-red-500'>{message}</div>
@@ -61,6 +63,7 @@ const Login = () => {
                 </form>
             </div>
         </div>
+        </Hero>
     );
 };
 
