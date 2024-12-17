@@ -12,7 +12,7 @@ const Reservation = () => {
           Book your table in just a few minutes and enjoy a special dining experience at <br className='hidden md:block'/> our restaurant.
         </p>
 
-        <button className="hover:bg-primary-4 bg-primary-5 text-white text-lg md:text-2xl px-8 py-4 md:px-20 md:py-8 rounded-full shadow-md font-semibold">
+        <button className="bg-primary-4 text-white text-lg md:text-2xl px-8 py-4 md:px-20 md:py-8 rounded-full duration-300 hover:brightness-75 shadow-md font-semibold">
           <p className="tracking-wider">Reserve now!</p>
         </button>
       </Hero>

@@ -92,7 +92,7 @@ class AuthController
             'password' => $validated['password'],
         ]);
 
-        return to_route('contactUs');
+        return to_route('login');
     }
 
     public function logout(Request $request)

@@ -19,8 +19,9 @@ const Register = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96">
+        <div className="flex justify-center items-center min-h-screen bg-primary-3">
+            <img src='/images/Hero.png' alt="Hero" className="h-[152vh] lg:h-full md:w-full relative z-0 brightness-50 object-cover" draggable='false' />
+            <div className="bg-primary-7 p-8 rounded-lg shadow-lg w-[84%] lg:w-[40vw] absolute">
                 <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
                 <form onSubmit={handleSubmit}>
                     {/* Nama */}
@@ -143,7 +144,7 @@ const Register = () => {
                     {/* Submit Button */}
                     <button
                         type="submit"
-                        className="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        className="w-full py-2 px-4 bg-primary-4 text-white font-semibold rounded-lg shadow-md duration-300 hover:brightness-75 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                     >
                         Register
                     </button>
