@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ReservationController;
 use App\Models\Menu;
+use App\Models\Reservation;
 
 // Route untuk halaman utama (Home)
 Route::get('/', function () {
@@ -28,9 +29,8 @@ Route::get('/contactus', function () {
 })->name('contactUs');
 
 Route::get('/admin', function () {
-    return Inertia('Admin');
+    return Inertia::render('Admin/DashboardAdmin');
 })->name('admin');
-
 
 // Menu
 Route::get('/editmenu', function () {
@@ -38,6 +38,26 @@ Route::get('/editmenu', function () {
         'menus' => Menu::get()
     ]);
 })->name('editMenu');
+
+// Reserrvation 
+Route::get('/editreservation', function () {
+    return Inertia::render('ReservationUser', [
+        'reservations' => Reservation::get()
+    ]);
+})->name('reservationUser');
+
+Route::post('/add-reservation', [ReservationController::class, 'store'])->name('add.reservation');
+Route::post('/update-reservation', [ReservationController::class, 'update'])->name('update.reservation');
+Route::delete('/delete-reservation/{id}', [ReservationController::class, 'destroy'])->name('delete.reservation');
+
+Route::get('/reservationvalidate', function () {
+    return Inertia::render('ReservationValidate', [
+        'reservations' => Reservation::get()
+    ]);
+})->name('reservationValidate');
+
+Route::post('/validate-reservation', [ReservationController::class, 'validate'])->name('validate.reservation');
+
 
 Route::post('/add-menu', [MenuController::class, 'store'])->name('add.menu');
 Route::post('/update-menu', [MenuController::class, 'update'])->name('update.menu');

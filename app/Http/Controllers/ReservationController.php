@@ -28,10 +28,10 @@ class ReservationController
      */
     public function store(Request $request)
     {
+        
         // Validasi data reservasi
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:100'],
-            'status' => ['required', 'in:Pending,Rejected,Approved'],
             'reservation_datetime' => ['required', 'date', 'after_or_equal:today'],
             'people' => ['required', 'integer', 'min:1'],
             'room_type' => ['required', 'in:Indoor,Outdoor,VIP'],
@@ -39,11 +39,11 @@ class ReservationController
             'additional_request' => ['nullable', 'string'],
         ]);
 
+
         $user_id = session('user_id');
 
         $reservation = Reservation::create([
             'name' => $validated['name'],
-            'status' => $validated['status'],
             'reservation_datetime' => $validated['reservation_datetime'],
             'people' => $validated['people'],
             'room_type' => $validated['room_type'],
@@ -69,6 +69,20 @@ class ReservationController
         //
     }
 
+
+    public function validate(Request $request)
+    {
+        $validated = $request->validate([
+            'id' => ['int'],
+            'status' => ['required', 'in:Pending,Rejected,Approved'],
+        ]);
+
+        $new_reservation = [
+            'status' => $validated['status']
+        ];
+
+        Reservation::where('id', $validated['id'])->update($new_reservation);
+    }
     /**
      * Update the specified resource in storage.
      */
@@ -76,12 +90,13 @@ class ReservationController
     {
         // Validasi data reservasi
         $validated = $request->validate([
-            'name' => ['required', 'string', 'max:100'],
-            'status' => ['required', 'in:Pending,Rejected,Approved'],
-            'reservation_datetime' => ['required', 'date', 'after_or_equal:today'],
-            'people' => ['required', 'integer', 'min:1'],
-            'room_type' => ['required', 'in:Indoor,Outdoor,VIP'],
-            'payment_method' => ['required', 'in:BRI,BNI,Mandiri,BCA,OVO/Gopay/ShopeePay'],
+            'id' => ['int'],
+            'name' => [ 'string', 'max:100'],
+            
+            'reservation_datetime' => [ 'date', 'after_or_equal:today'],
+            'people' => [ 'integer', 'min:1'],
+            'room_type' => [ 'in:Indoor,Outdoor,VIP'],
+            'payment_method' => [ 'in:BRI,BNI,Mandiri,BCA,OVO/Gopay/ShopeePay'],
             'additional_request' => ['nullable', 'string'],
         ]);
 
@@ -89,7 +104,7 @@ class ReservationController
 
         $new_reservation = [
             'name' => $validated['name'],
-            'status' => $validated['status'],
+            
             'reservation_datetime' => $validated['reservation_datetime'],
             'people' => $validated['people'],
             'room_type' => $validated['room_type'],

@@ -94,4 +94,12 @@ class AuthController
 
         return to_route('contactUs');
     }
+
+    public function logout(Request $request)
+    {
+        session(['user_id' => 0]);
+        session(['admin_id' => 0]);
+
+        return to_route('Dashboard');
+    }
 }
